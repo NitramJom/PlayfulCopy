@@ -44,7 +44,7 @@ class _CustomAppMenuState extends State<CustomAppMenu>
         child: Container(
           decoration: new BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            color: Colors.green,
+            color: Colors.transparent,
           ),
           padding: EdgeInsets.symmetric(horizontal: 10),
           width: 150,
@@ -59,7 +59,7 @@ class _CustomAppMenuState extends State<CustomAppMenu>
                     onPressed: () => pageProvider.goTo(0)),
                 CustomMenuItem(
                     delay: 30,
-                    text: 'About',
+                    text: 'Parallax',
                     onPressed: () => pageProvider.goTo(1)),
                 CustomMenuItem(
                     delay: 60,

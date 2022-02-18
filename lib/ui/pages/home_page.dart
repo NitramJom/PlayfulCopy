@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart';
 
 import 'package:vertical_landing_page/providers/page_provider.dart';
-import 'package:vertical_landing_page/ui/pages/Parallax.dart';
+import 'package:vertical_landing_page/ui/pages/parallax_page.dart';
 
 import 'package:vertical_landing_page/ui/shared/custom_app_menu.dart';
 
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         child: Stack(
           children: [
             _HomeBody(),
-            Positioned(right: 20, top: 20, child: CustomAppMenu()),
+            Positioned(left: 20, top: 20, child: CustomAppMenu()),
           ],
         ),
       ),
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          stops: [0.5, 0.5]));
+          stops: [1.0, 1.0]));
 }
 
 class _HomeBody extends StatelessWidget {
@@ -50,7 +50,7 @@ class _HomeBody extends StatelessWidget {
       scrollDirection: Axis.vertical,
       children: [
         HomeView(),
-        Positioned(child: ExampleParallax()),
+        ExampleParallax(),
         AboutView(),
         //PricingView(),
         ContactView(),
